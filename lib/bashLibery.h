@@ -1,4 +1,0 @@
-#ifndef BASHLIBERY_H
-#define BASHLIBERY_H
-
-#endif // BASHLIBERY_H

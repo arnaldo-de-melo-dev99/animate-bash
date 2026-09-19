@@ -1,6 +1,21 @@
-#include "bashLibery.h"
+#include "../lib/include/bashLibery.h"
+
+void ft_shell() {
+    char *line;
+    while (1) {
+        line = readline("bash$ ");
+        if (!line) break;
+        add_history(line);
+        free(line);
+    }
+}
 
 int main(int ac, char **av, char **env) {
     if (ac < 2) return (1);
+    t_shell *shell;
+    (void)av;
+    shell = malloc(sizeof(t_shell));
+    init_env(&shell, env);
+    ft_shell();
     return (0);
 }
