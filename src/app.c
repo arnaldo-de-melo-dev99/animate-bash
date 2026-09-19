@@ -1,6 +1,6 @@
 #include "../lib/include/bashLibery.h"
 
-void ft_shell() {
+void shell() {
     char *line;
     while (1) {
         line = readline("bash$ ");
@@ -16,6 +16,6 @@ int main(int ac, char **av, char **env) {
     (void)av;
     shell = malloc(sizeof(t_shell));
     init_env(&shell, env);
-    ft_shell();
+    shell();
     return (0);
 }
